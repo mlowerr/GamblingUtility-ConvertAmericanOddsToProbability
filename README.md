@@ -1,4 +1,4 @@
-# GamblingUtilities
+# GamblingUtility-ConvertAmericanOddsToProbability
 
 A small, standalone HTML utility that converts American betting odds to implied probability.
 
