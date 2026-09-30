@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<HEAD>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <TITLE>American Odds To Probability Table (+500 to -500)</TITLE>
+   <STYLE>
+      body { font-family: Consolas, Menlo, monospace; margin: 1.5rem; color: #1a1a1a; }
+      h1 { font-size: 1.25rem; }
+      p.note { font-size: 0.8rem; color: #555; max-width: 60ch; }
+      #filter { font-family: inherit; font-size: 0.9rem; padding: 0.25rem 0.4rem; width: 12rem; }
+      table { border-collapse: collapse; margin-top: 0.75rem; }
+      caption { text-align: left; font-size: 0.8rem; color: #555; padding-bottom: 0.35rem; }
+      th, td { border: 1px solid #ccc; padding: 0.15rem 0.75rem; text-align: right; }
+      th { background: #f0f0f0; }
+      tbody tr:nth-child(even) { background: #fafafa; }
+   </STYLE>
+</HEAD>
+
+<BODY>
+   <H1>American Odds To Probability Table</H1>
+   <P class="note">Precalculated implied probabilities for American odds from +500 to -500 in increments of 5. Positive odds imply <code>100 / (odds + 100)</code>; negative odds imply <code>|odds| / (|odds| + 100)</code>. Odds of 0 have no valid conversion and are shown as &mdash;.</P>
+   <LABEL for="filter">Filter: </LABEL><INPUT type="search" id="filter" placeholder="e.g. -150 or +2">
+   <TABLE id="oddsTable">
+      <CAPTION>American odds and implied probability</CAPTION>
+      <THEAD>
+         <TR><TH scope="col">American Odds</TH><TH scope="col">Implied Probability</TH></TR>
+      </THEAD>
+      <TBODY>
+            <tr><td>+500</td><td>16.67%</td></tr>
+            <tr><td>+495</td><td>16.81%</td></tr>
+            <tr><td>+490</td><td>16.95%</td></tr>
+            <tr><td>+485</td><td>17.09%</td></tr>
+            <tr><td>+480</td><td>17.24%</td></tr>
+            <tr><td>+475</td><td>17.39%</td></tr>
+            <tr><td>+470</td><td>17.54%</td></tr>
+            <tr><td>+465</td><td>17.7%</td></tr>
+            <tr><td>+460</td><td>17.86%</td></tr>
+            <tr><td>+455</td><td>18.02%</td></tr>
+            <tr><td>+450</td><td>18.18%</td></tr>
+            <tr><td>+445</td><td>18.35%</td></tr>
+            <tr><td>+440</td><td>18.52%</td></tr>
+            <tr><td>+435</td><td>18.69%</td></tr>
+            <tr><td>+430</td><td>18.87%</td></tr>
+            <tr><td>+425</td><td>19.05%</td></tr>
+            <tr><td>+420</td><td>19.23%</td></tr>
+            <tr><td>+415</td><td>19.42%</td></tr>
+            <tr><td>+410</td><td>19.61%</td></tr>
+            <tr><td>+405</td><td>19.8%</td></tr>
+            <tr><td>+400</td><td>20%</td></tr>
+            <tr><td>+395</td><td>20.2%</td></tr>
+            <tr><td>+390</td><td>20.41%</td></tr>
+            <tr><td>+385</td><td>20.62%</td></tr>
+            <tr><td>+380</td><td>20.83%</td></tr>
+            <tr><td>+375</td><td>21.05%</td></tr>
+            <tr><td>+370</td><td>21.28%</td></tr>
+            <tr><td>+365</td><td>21.51%</td></tr>
+            <tr><td>+360</td><td>21.74%</td></tr>
+            <tr><td>+355</td><td>21.98%</td></tr>
+            <tr><td>+350</td><td>22.22%</td></tr>
+            <tr><td>+345</td><td>22.47%</td></tr>
+            <tr><td>+340</td><td>22.73%</td></tr>
+            <tr><td>+335</td><td>22.99%</td></tr>
+            <tr><td>+330</td><td>23.26%</td></tr>
+            <tr><td>+325</td><td>23.53%</td></tr>
+            <tr><td>+320</td><td>23.81%</td></tr>
+            <tr><td>+315</td><td>24.1%</td></tr>
+            <tr><td>+310</td><td>24.39%</td></tr>
+            <tr><td>+305</td><td>24.69%</td></tr>
+            <tr><td>+300</td><td>25%</td></tr>
+            <tr><td>+295</td><td>25.32%</td></tr>
+            <tr><td>+290</td><td>25.64%</td></tr>
+            <tr><td>+285</td><td>25.97%</td></tr>
+            <tr><td>+280</td><td>26.32%</td></tr>
+            <tr><td>+275</td><td>26.67%</td></tr>
+            <tr><td>+270</td><td>27.03%</td></tr>
+            <tr><td>+265</td><td>27.4%</td></tr>
+            <tr><td>+260</td><td>27.78%</td></tr>
+            <tr><td>+255</td><td>28.17%</td></tr>
+            <tr><td>+250</td><td>28.57%</td></tr>
+            <tr><td>+245</td><td>28.99%</td></tr>
+            <tr><td>+240</td><td>29.41%</td></tr>
+            <tr><td>+235</td><td>29.85%</td></tr>
+            <tr><td>+230</td><td>30.3%</td></tr>
+            <tr><td>+225</td><td>30.77%</td></tr>
+            <tr><td>+220</td><td>31.25%</td></tr>
+            <tr><td>+215</td><td>31.75%</td></tr>
+            <tr><td>+210</td><td>32.26%</td></tr>
+            <tr><td>+205</td><td>32.79%</td></tr>
+            <tr><td>+200</td><td>33.33%</td></tr>
+            <tr><td>+195</td><td>33.9%</td></tr>
+            <tr><td>+190</td><td>34.48%</td></tr>
+            <tr><td>+185</td><td>35.09%</td></tr>
+            <tr><td>+180</td><td>35.71%</td></tr>
+            <tr><td>+175</td><td>36.36%</td></tr>
+            <tr><td>+170</td><td>37.04%</td></tr>
+            <tr><td>+165</td><td>37.74%</td></tr>
+            <tr><td>+160</td><td>38.46%</td></tr>
+            <tr><td>+155</td><td>39.22%</td></tr>
+            <tr><td>+150</td><td>40%</td></tr>
+            <tr><td>+145</td><td>40.82%</td></tr>
+            <tr><td>+140</td><td>41.67%</td></tr>
+            <tr><td>+135</td><td>42.55%</td></tr>
+            <tr><td>+130</td><td>43.48%</td></tr>
+            <tr><td>+125</td><td>44.44%</td></tr>
+            <tr><td>+120</td><td>45.45%</td></tr>
+            <tr><td>+115</td><td>46.51%</td></tr>
+            <tr><td>+110</td><td>47.62%</td></tr>
+            <tr><td>+105</td><td>48.78%</td></tr>
+            <tr><td>+100</td><td>50%</td></tr>
+            <tr><td>+95</td><td>51.28%</td></tr>
+            <tr><td>+90</td><td>52.63%</td></tr>
+            <tr><td>+85</td><td>54.05%</td></tr>
+            <tr><td>+80</td><td>55.56%</td></tr>
+            <tr><td>+75</td><td>57.14%</td></tr>
+            <tr><td>+70</td><td>58.82%</td></tr>
+            <tr><td>+65</td><td>60.61%</td></tr>
+            <tr><td>+60</td><td>62.5%</td></tr>
+            <tr><td>+55</td><td>64.52%</td></tr>
+            <tr><td>+50</td><td>66.67%</td></tr>
+            <tr><td>+45</td><td>68.97%</td></tr>
+            <tr><td>+40</td><td>71.43%</td></tr>
+            <tr><td>+35</td><td>74.07%</td></tr>
+            <tr><td>+30</td><td>76.92%</td></tr>
+            <tr><td>+25</td><td>80%</td></tr>
+            <tr><td>+20</td><td>83.33%</td></tr>
+            <tr><td>+15</td><td>86.96%</td></tr>
+            <tr><td>+10</td><td>90.91%</td></tr>
+            <tr><td>+5</td><td>95.24%</td></tr>
+            <tr><td>0</td><td>&mdash;</td></tr>
+            <tr><td>-5</td><td>4.76%</td></tr>
+            <tr><td>-10</td><td>9.09%</td></tr>
+            <tr><td>-15</td><td>13.04%</td></tr>
+            <tr><td>-20</td><td>16.67%</td></tr>
+            <tr><td>-25</td><td>20%</td></tr>
+            <tr><td>-30</td><td>23.08%</td></tr>
+            <tr><td>-35</td><td>25.93%</td></tr>
+            <tr><td>-40</td><td>28.57%</td></tr>
+            <tr><td>-45</td><td>31.03%</td></tr>
+            <tr><td>-50</td><td>33.33%</td></tr>
+            <tr><td>-55</td><td>35.48%</td></tr>
+            <tr><td>-60</td><td>37.5%</td></tr>
+            <tr><td>-65</td><td>39.39%</td></tr>
+            <tr><td>-70</td><td>41.18%</td></tr>
+            <tr><td>-75</td><td>42.86%</td></tr>
+            <tr><td>-80</td><td>44.44%</td></tr>
+            <tr><td>-85</td><td>45.95%</td></tr>
+            <tr><td>-90</td><td>47.37%</td></tr>
+            <tr><td>-95</td><td>48.72%</td></tr>
+            <tr><td>-100</td><td>50%</td></tr>
+            <tr><td>-105</td><td>51.22%</td></tr>
+            <tr><td>-110</td><td>52.38%</td></tr>
+            <tr><td>-115</td><td>53.49%</td></tr>
+            <tr><td>-120</td><td>54.55%</td></tr>
+            <tr><td>-125</td><td>55.56%</td></tr>
+            <tr><td>-130</td><td>56.52%</td></tr>
+            <tr><td>-135</td><td>57.45%</td></tr>
+            <tr><td>-140</td><td>58.33%</td></tr>
+            <tr><td>-145</td><td>59.18%</td></tr>
+            <tr><td>-150</td><td>60%</td></tr>
+            <tr><td>-155</td><td>60.78%</td></tr>
+            <tr><td>-160</td><td>61.54%</td></tr>
+            <tr><td>-165</td><td>62.26%</td></tr>
+            <tr><td>-170</td><td>62.96%</td></tr>
+            <tr><td>-175</td><td>63.64%</td></tr>
+            <tr><td>-180</td><td>64.29%</td></tr>
+            <tr><td>-185</td><td>64.91%</td></tr>
+            <tr><td>-190</td><td>65.52%</td></tr>
+            <tr><td>-195</td><td>66.1%</td></tr>
+            <tr><td>-200</td><td>66.67%</td></tr>
+            <tr><td>-205</td><td>67.21%</td></tr>
+            <tr><td>-210</td><td>67.74%</td></tr>
+            <tr><td>-215</td><td>68.25%</td></tr>
+            <tr><td>-220</td><td>68.75%</td></tr>
+            <tr><td>-225</td><td>69.23%</td></tr>
+            <tr><td>-230</td><td>69.7%</td></tr>
+            <tr><td>-235</td><td>70.15%</td></tr>
+            <tr><td>-240</td><td>70.59%</td></tr>
+            <tr><td>-245</td><td>71.01%</td></tr>
+            <tr><td>-250</td><td>71.43%</td></tr>
+            <tr><td>-255</td><td>71.83%</td></tr>
+            <tr><td>-260</td><td>72.22%</td></tr>
+            <tr><td>-265</td><td>72.6%</td></tr>
+            <tr><td>-270</td><td>72.97%</td></tr>
+            <tr><td>-275</td><td>73.33%</td></tr>
+            <tr><td>-280</td><td>73.68%</td></tr>
+            <tr><td>-285</td><td>74.03%</td></tr>
+            <tr><td>-290</td><td>74.36%</td></tr>
+            <tr><td>-295</td><td>74.68%</td></tr>
+            <tr><td>-300</td><td>75%</td></tr>
+            <tr><td>-305</td><td>75.31%</td></tr>
+            <tr><td>-310</td><td>75.61%</td></tr>
+            <tr><td>-315</td><td>75.9%</td></tr>
+            <tr><td>-320</td><td>76.19%</td></tr>
+            <tr><td>-325</td><td>76.47%</td></tr>
+            <tr><td>-330</td><td>76.74%</td></tr>
+            <tr><td>-335</td><td>77.01%</td></tr>
+            <tr><td>-340</td><td>77.27%</td></tr>
+            <tr><td>-345</td><td>77.53%</td></tr>
+            <tr><td>-350</td><td>77.78%</td></tr>
+            <tr><td>-355</td><td>78.02%</td></tr>
+            <tr><td>-360</td><td>78.26%</td></tr>
+            <tr><td>-365</td><td>78.49%</td></tr>
+            <tr><td>-370</td><td>78.72%</td></tr>
+            <tr><td>-375</td><td>78.95%</td></tr>
+            <tr><td>-380</td><td>79.17%</td></tr>
+            <tr><td>-385</td><td>79.38%</td></tr>
+            <tr><td>-390</td><td>79.59%</td></tr>
+            <tr><td>-395</td><td>79.8%</td></tr>
+            <tr><td>-400</td><td>80%</td></tr>
+            <tr><td>-405</td><td>80.2%</td></tr>
+            <tr><td>-410</td><td>80.39%</td></tr>
+            <tr><td>-415</td><td>80.58%</td></tr>
+            <tr><td>-420</td><td>80.77%</td></tr>
+            <tr><td>-425</td><td>80.95%</td></tr>
+            <tr><td>-430</td><td>81.13%</td></tr>
+            <tr><td>-435</td><td>81.31%</td></tr>
+            <tr><td>-440</td><td>81.48%</td></tr>
+            <tr><td>-445</td><td>81.65%</td></tr>
+            <tr><td>-450</td><td>81.82%</td></tr>
+            <tr><td>-455</td><td>81.98%</td></tr>
+            <tr><td>-460</td><td>82.14%</td></tr>
+            <tr><td>-465</td><td>82.3%</td></tr>
+            <tr><td>-470</td><td>82.46%</td></tr>
+            <tr><td>-475</td><td>82.61%</td></tr>
+            <tr><td>-480</td><td>82.76%</td></tr>
+            <tr><td>-485</td><td>82.91%</td></tr>
+            <tr><td>-490</td><td>83.05%</td></tr>
+            <tr><td>-495</td><td>83.19%</td></tr>
+            <tr><td>-500</td><td>83.33%</td></tr>
+      </TBODY>
+   </TABLE>
+
+   <SCRIPT type="text/javascript">
+      document.getElementById("filter").addEventListener("input", function (event) {
+         var needle = event.target.value.trim().toLowerCase();
+         var rows = document.querySelectorAll("#oddsTable tbody tr");
+         for (var i = 0; i < rows.length; i++) {
+            var cells = rows[i].getElementsByTagName("td");
+            var show = needle === "" || cells[0].textContent.toLowerCase().indexOf(needle) !== -1;
+            rows[i].style.display = show ? "" : "none";
+         }
+      });
+   </SCRIPT>
+</BODY>
+
+</HTML>
